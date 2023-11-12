@@ -1,0 +1,32 @@
+.post-preview {
+    padding: 10px 35px;
+    margin: 20px 60px;
+    border-bottom: 1px solid white;
+    text-align: left;
+}
+
+.post-preview:hover {
+    box-shadow: 1px 3px 5px black;
+}
+
+.post-preview h2 {
+    font-size: 20px;
+    color: salmon;
+    margin-bottom: 8px;
+}
+
+.post-preview h3 {
+    font-size: 15px;
+    color: grey;
+}
+
+.post-preview ul {
+    /* gets rid of spacing on the left */
+    padding-left: 0px;
+}
+
+.post-preview li {
+    /* gets rid of bullet points */
+    list-style: none;
+    font-size: 13px;
+}
