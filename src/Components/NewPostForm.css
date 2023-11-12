@@ -1,0 +1,57 @@
+.form {
+    max-width: 400px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.form label {
+    text-align: left;
+    display: block;
+}
+
+.form h2 {
+    font-size: 20px;
+    color: sandybrown;
+    margin-bottom: 30px;
+}
+
+.form input,
+.form textarea,
+.form select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid salmon;
+    box-sizing: border-box;
+    display: block;
+}
+
+.form button {
+    background: sandybrown;
+    color: white;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* trying to make the checkbox position right next to their respective labels */
+.checkboxes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+
+.checkboxes label {
+    float: left;
+    margin: 5px 0px;
+}
+
+.checkboxes input {
+    margin: 5px 0px;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 30px
+}
