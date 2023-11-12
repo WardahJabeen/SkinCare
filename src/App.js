@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Home from "./Pages/Home"
 import Profile from "./Pages/Profile"
+import Navbar from "./Components/Navbar"
+
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Link, Outlet } from 'react-router-dom'
 
 function App() {
@@ -28,8 +30,9 @@ const Root = () => {
   return (
     <>
       <div>
-        <Link to="/">Home</Link>
-        <Link to="/profile">Profile</Link>
+        <Navbar />
+        {/* <Link to="/">Home</Link>
+        <Link to="/profile">Profile</Link> */}
       </div>
       <div>
         <Outlet />

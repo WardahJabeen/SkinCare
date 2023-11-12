@@ -70,7 +70,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-## Git Command Lines
+### Git Command Lines
 
 To create a new branch and switch into it:
 
@@ -81,11 +81,12 @@ To switch to another branch:
 `git branch [Branch_Name]`
 
 To check the current branch:
+
 `git branch`
 
-**make sure to create new branches from the correct branches
+**make sure to create new branches from the correct branches**
 
-##Additional Command Lines for Installation (for personal reference)
+### Additional Command Lines for Installation (for personal reference)
 
 To create the app:
 
