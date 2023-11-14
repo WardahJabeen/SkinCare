@@ -17,9 +17,9 @@ function NewPostForm() {
     // }
 
     return (
-        <div className='form'>
-            <h2>New Post</h2>
-            <form>
+        <div >
+            <form className='form-layout'>
+                <h1>New Post</h1>
                 <label>Product Review:</label>
 
                 <textarea

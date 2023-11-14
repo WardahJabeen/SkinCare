@@ -1,13 +1,11 @@
-import React from 'react'
-import NewPostForm from "../Components/NewPostForm.js"
+import React, { useState } from 'react'
+import "../Components/Popup.css"
 
 
 function Profile() {
     return (
         <div>
             <h1>Profile Page</h1>
-            {/* for testing purposes */}
-            <NewPostForm />
         </div>
     )
 }
