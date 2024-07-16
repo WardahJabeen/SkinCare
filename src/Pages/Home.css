@@ -1,15 +1,36 @@
-.post-preview {
-    padding: 10px 16px;
-    margin: 20px 0;
-    border-bottom: 1px solid white;
+.home {
+    background-color: bisque;
 }
 
-.post-preview:hover {
-    box-shadow: 1px 3px 5px black;
-}
 
-.post-preview h2 {
-    font-size: 20px;
+.round-button {
+    position: fixed;
+    bottom: 20px;
+    /* Adjust the distance from the bottom */
+    right: 20px;
+    /* Adjust the distance from the right */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    /* Green background */
     color: salmon;
-    margin-bottom: 8px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgb(185, 110, 102);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.round-button:hover {
+    background-color: salmon;
+    color: white;
+    box-shadow: 0 8px 16px rgb(185, 110, 102);
+}
+
+.round-button i {
+    font-size: 24px;
 }

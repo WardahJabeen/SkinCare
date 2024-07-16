@@ -1,16 +1,24 @@
+.form-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .form-layout label {
     text-align: left;
     display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
 .form-layout h1 {
     font-size: 30px;
     color: sandybrown;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .form-layout h3 {
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 15px;
     text-align: left;
 }
@@ -19,47 +27,125 @@
 .form-layout textarea,
 .form-layout select {
     width: 100%;
-    padding: 8px 10px;
-    margin: 16px 0;
+    padding: 10px 15px;
+    margin: 10px 0;
     border: 1px solid salmon;
+    border-radius: 5px;
     box-sizing: border-box;
     display: block;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.form-layout input {
-    margin-bottom: 25px;
+.form-layout input:focus,
+.form-layout textarea:focus,
+.form-layout select:focus {
+    border-color: sandybrown;
+    box-shadow: 0 0 5px sandybrown;
+    outline: none;
 }
 
 .form-layout textarea {
     height: 100px;
+    overflow-y: auto;
+}
+
+.form-layout textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-layout textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.form-layout textarea::-webkit-scrollbar-thumb {
+    background: sandybrown;
+    border-radius: 5px;
+}
+
+.form-layout textarea::-webkit-scrollbar-thumb:hover {
+    background: #e07a3d;
 }
 
 .form-layout button {
     background: sandybrown;
     color: white;
     border: 0;
-    padding: 8px;
+    padding: 10px 15px;
     border-radius: 8px;
     cursor: pointer;
+    margin-top: 20px;
+    align-self: center;
+    font-size: 16px;
+    transition: background 0.3s;
 }
 
-/* trying to make the checkbox position right next to their respective labels */
+.form-layout button:hover {
+    background: #e07a3d;
+}
+
+/* Checkbox styling */
 .checkboxes {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 30px;
-
 }
 
 .checkboxes label {
-    float: left;
-    margin: 5px 0px;
+    margin: 0 5px 0 0;
+    font-weight: normal;
 }
 
-.checkboxes input {
-    margin: 5px 0px;
-    width: auto;
-    margin-left: 10px;
-    margin-right: 30px
+.checkboxes input[type="checkbox"] {
+    appearance: none;
+    /* background-color: #f1f1f1; */
+    margin: 0 10px 0 0;
+    font: inherit;
+    color: sandybrown;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.1em solid sandybrown;
+    border-radius: 0.25em;
+    /* transform: translateY(-0.075em); */
+    display: grid;
+    place-content: center;
+}
+
+.checkboxes input[type="checkbox"]::before {
+    content: "";
+    /* Creates a pseudo-element before the checkbox */
+    width: 0.65em;
+    /* Sets the width of the pseudo-element */
+    height: 0.65em;
+    /* Sets the height of the pseudo-element */
+    transform: scale(0);
+    /* Initially scales the pseudo-element to zero (invisible) */
+    transition: 120ms transform ease-in-out;
+    /* Adds a transition effect for the transform property */
+    box-shadow: inset 1em 1em sandybrown;
+    /* Adds an inset box-shadow to create the checkmark */
+    transform-origin: bottom left;
+    /* Sets the origin point for the transformation */
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 19%, 80% 0, 43% 62%);
+    /* Creates a checkmark shape using the clip-path property */
+}
+
+.checkboxes input[type="checkbox"]:checked::before {
+    transform: scale(1);
+    /* Scales the pseudo-element to its full size when the checkbox is checked */
+}
+
+.checkboxes input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Custom dropdown styling */
+.form-layout select {
+    appearance: none;
+    background: white url('data:image/svg+xml;utf8,<svg fill="sandybrown" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-size: 20px;
+    padding-right: 40px;
 }
